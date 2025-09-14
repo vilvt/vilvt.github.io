@@ -1,0 +1,57 @@
+/* General reset */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+/* Header */
+header {
+  background: #8a388b;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header .tagline {
+  font-style: italic;
+  color: #ecf0f1;
+}
+
+/* Main */
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  color: #8a388b;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background: #8a388b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #cd49da;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
