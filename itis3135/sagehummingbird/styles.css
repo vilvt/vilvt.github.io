@@ -1,0 +1,111 @@
+/* Jungle Theme */
+body {
+  font-family: Arial, sans-serif;
+  margin: 1;
+  background: linear-gradient(to bottom, #2e5339, #1b2d24);
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #2a3c24;
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0.2em 0;
+  font-size: 2.5em;
+  color: #87ceeb; /* rainforest sky blue */
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #87ceeb;
+}
+
+/* Footer */
+footer {
+  background: #2a3c24;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin: 1.5em 0;
+  font-size: 2em;
+  color: #b7e4c7;
+}
+
+/* Product Cards */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 2em;
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  padding: 1.5em; /* adds space around text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.card-front {
+  background: #3b4a39;
+}
+
+.card-back {
+  background: #507864;
+  transform: rotateY(180deg);
+}
+
+.card h3 {
+  margin-bottom: 0.8em;
+  font-size: 1.3em;
+  color: #87ceeb;
+}
