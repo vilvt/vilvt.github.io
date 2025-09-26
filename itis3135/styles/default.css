@@ -55,3 +55,12 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+header a {
+  color: #cd49da;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
