@@ -10,6 +10,31 @@
 
     <!-- Embedded CSS -->
     <style>
+    main, .maincontainer {
+    width: 90%;          /* percentage width for responsiveness */
+    max-width: 1200px;   /* keeps content from stretching too wide */
+    margin: 0 auto;      /* centers content horizontally */
+    text-align: center;
+    }
+
+    body {
+    margin: 0;
+    padding: 0;
+    }
+
+    /* === RESPONSIVE MEDIA QUERIES === */
+
+    /* large screens / laptops */
+    @media screen and (min-width: 981px) and (max-width: 1400px) {
+    }
+
+    /* tablets */
+    @media screen and (min-width: 601px) and (max-width: 980px) {
+    }
+
+    /* phones */
+    @media screen and (max-width: 600px) {
+    }
         /* General page styling */
         body {
             font-family: 'Arial', sans-serif;
