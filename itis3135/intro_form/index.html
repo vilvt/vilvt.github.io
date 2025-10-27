@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saige Hatfield ITIS 3135 | Introduction Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <h1>Saige Hatfield ITIS 3135</h1>  
+  <h2>Introduction Form</h2>
+  <h3>Please submit the form below.</h3>
+
+  <form id="introForm">
+    <!-- name fields -->
+    <label>First Name:</label>
+    <input type="text" id="firstName" value="Saige" required><br><br>
+
+    <label>Middle Initial:</label>
+    <input type="text" id="middleName" value="C."><br><br>
+
+    <label>Preferred/Nickname:</label>
+    <input type="text" id="nickname" value="Saige"><br><br>
+
+    <label>Last Name:</label>
+    <input type="text" id="lastName" value="Hatfield" required><br><br>
+
+    <!-- mascot -->
+    <label>Mascot Adjective:</label>
+    <input type="text" id="mascotAdj" value="Sage" required><br><br>
+
+    <label>Mascot Animal:</label>
+    <input type="text" id="mascotAnimal" value="Hummingbird" required><br><br>
+
+    <label>Divider:</label>
+    <input type="text" id="divider" value="~" required><br><br>
+
+    <!-- picture -->
+    <label>Upload Profile Image:</label><br>
+    <input type="file" id="imageUpload" accept="image/*" value="images/saige-by-boba.png"><br><br>
+
+    <label>Picture Caption:</label>
+    <input type="text" id="caption" value="Standing beside a comically large boba." required><br><br>
+
+    <!-- acknowledgment -->
+    <label>Acknowledgment Statement:</label>
+    <input type="text" id="ackStatement" value="I understand that what is on this page is public, and so is anything that I put on it. - SH" required><br><br>
+
+    <label>Acknowledgment Date:</label>
+    <input type="date" id="ackDate" value="2025-10-26" required><br><br>
+
+    <!-- personal statement -->
+    <label>Personal Statement:</label><br>
+    <textarea id="personalStatement" rows="3" required>Hello! My name is Saige, and I’m a third-year student majoring in Computer Science 
+    with a concentration in Human-Computer Interaction. The cross-section between computers and the human mind is a beautiful thing, and I hope to delve 
+    deeper into how these two interact. My goal is to have a career in UI/UX and utilize all the fancy psychology and computer science principles I have learned.</textarea><br><br>
+
+    <!-- 7 bullets -->
+    <label>Personal Background:</label>
+    <input type="text" id="personalBackground" value="In the wondrous year of 2005, I was born in Greensville, NC, but I’ve lived in a lot of different parts of North Carolina. 
+    My current hometown is Lewisville, NC, but no one knows where that is, so I say Winston-Salem. My dad is a huge computer nerd and loves to build computers in his free time, 
+    and my brothers and I played lots of video games as kids, so I got into the technology nerd field quite young." required><br><br>
+
+    <label>Professional Background:</label>
+    <input type="text" id="professionalBackground" value="I’ve been involved in UNC Charlotte’s Housing and Residence Life department, and have held positions such as Director of 
+    External Affairs for RSA, Desk Assistant, Summer Resident Advisor, and now a Full Year Resident Advisor. This previous summer, I worked with the Office of Undergraduate Research 
+    on a Computer Science research project called BRIDGES, where I worked with Professor KRS to build computer science assignments for introductory high school and college computer science courses." required><br><br>
+
+    <label>Academic Background:</label>
+    <input type="text" id="academicBackground" value="I’m a third-year student majoring in Computer Science, hoping to graduate in December 2026. My concentration is in Human-Computer Interaction, 
+    and my minor is in Cognitive Science." required><br><br>
+
+    <label>Primary Computer Platform:</label>
+    <input type="text" id="computerPlatform" value="Custom-built, Windows 10, desktop, dorm" required><br><br>
+
+    <!-- courses -->
+    <label>Courses: (Department, Number, Course Name, Reason for Taking)</label><br>
+    <div id="courses">
+    <div class="course">
+        <input type="text" placeholder="Department" value="ITCS">
+        <input type="text" placeholder="Number" value="3688">
+        <input type="text" placeholder="Course Name" value="Computers and Their Impact on Society">
+        <input type="text" placeholder="Reason for taking" value="Although required, I’m interested in the ethics of new and upcoming technology and how our society will go about integrating all of it into our day-to-day lives.">
+        <button type="button" class="removeCourse">Remove</button>
+    </div>
+
+    <div class="course">
+        <input type="text" placeholder="Department" value="ITSCS">
+        <input type="text" placeholder="Number" value="3610">
+        <input type="text" placeholder="Course Name" value="Computing Leaders Seminar">
+        <input type="text" placeholder="Reason for taking" value="This course offers a service-based leadership opportunity, and it’s a great way to give back to your community while also learning new things yourself.">
+        <button type="button" class="removeCourse">Remove</button>
+    </div>
+
+    <div class="course">
+        <input type="text" placeholder="Department" value="STAT">
+        <input type="text" placeholder="Number" value="1220">
+        <input type="text" placeholder="Course Name" value="Elements of Stat I">
+        <input type="text" placeholder="Reason for taking" value="I may have tamed the beast of Calculus 2, but switching to a B.A. means you have to also start over your math.">
+        <button type="button" class="removeCourse">Remove</button>
+    </div>
+
+    <div class="course">
+        <input type="text" placeholder="Department" value="ITIS">
+        <input type="text" placeholder="Number" value="3135">
+        <input type="text" placeholder="Course Name" value="Front-End Web Application Development">
+        <input type="text" placeholder="Reason for taking" value="Required - but I need to learn how to make websites, etc., for my UI/UX portfolio!">
+        <button type="button" class="removeCourse">Remove</button>
+    </div>
+
+    <div class="course">
+        <input type="text" placeholder="Department" value="ITIS">
+        <input type="text" placeholder="Number" value="3130">
+        <input type="text" placeholder="Course Name" value="Introduction to Human-Centered Computing">
+        <input type="text" placeholder="Reason for taking" value="Although required, this class talks about pretty much everything I’m interested in.">
+        <button type="button" class="removeCourse">Remove</button>
+    </div>
+    </div>
+
+    <button type="button" id="addCourse">+ Add Course</button><br><br>
+
+    <!-- optional -->
+    <label>Funny Thing (optional):</label>
+    <input type="text" id="funnyThing" value="Insert funny joke here."><br><br>
+
+    <label>Something I’d like to share (optional):</label>
+    <input type="text" id="somethingShare" value="If you couldn’t tell by my introduction, I’m a yapper."><br><br>
+
+    <!-- quote -->
+    <label>Favorite Quote:</label>
+    <input type="text" id="quote" value="We accept the love we think we deserve." required><br><br>
+
+    <label>Quote Author:</label>
+    <input type="text" id="quoteAuthor" value="Stephen Chbosky" required><br><br>
+
+    <!-- links -->
+    <h3><label>Links:</label></h3><br>
+
+    <label>GitHub:</label>
+    <input type="url" class="linkInput" value="https://github.com/vilvt"><br>
+
+    <label>GitHub.io:</label>
+    <input type="url" class="linkInput" value="https://vilvt.github.io"><br>
+
+    <label>CLT Web:</label>
+    <input type="url" class="linkInput" value="https://webpages.charlotte.edu/shatfie5"><br>
+
+    <label>ITIS3135.io:</label>
+    <input type="url" class="linkInput" value="https://webpages.charlotte.edu/shatfie5/itis3135"><br>
+
+    <label>freeCodeCamp:</label>
+    <input type="url" class="linkInput" value="https://www.freecodecamp.org/vilvt"><br>
+
+    <label>Codecademy:</label>
+    <input type="url" class="linkInput" value="https://www.codecademy.com/profiles/vilvt"><br>
+
+    <label>LinkedIn:</label>
+    <input type="url" class="linkInput" value="https://www.linkedin.com/in/hatfieldsaige"><br><br>
+
+
+    <!-- buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button" id="clearResults">Clear</button>
+  </form>
+
+  <section id="resultSection"></section>
+
+  <script src="scripts/introduction.js"></script>
+</body>
+</html>
+
+

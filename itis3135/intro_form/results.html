@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saige Hatfield ITIS 3135 | Introduction Information</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="results">
+  <div class="results-container" id="output"></div>
+    <div id="output"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const data = JSON.parse(localStorage.getItem("introData"));
+      const output = document.getElementById("output");
+
+      if (!data) {
+        output.innerHTML = "<p>No submission data found. Please go back and fill out the form.</p>";
+        return;
+      }
+
+      output.innerHTML = `
+        <h1>${data.firstName} ${data.middleName} ${data.lastName}</h1>
+        <p><strong>Acknowledgment:</strong> <em>${data.ackStatement} (${data.ackDate})</em></p>
+        <h2>${data.mascotAdj} ${data.mascotAnimal}</h2>
+        ${data.imageData ? `<img src="${data.imageData}" alt="Profile Image">` : ""}
+        <p><em>${data.caption}</em></p>
+
+        <h3>Personal Statement</h3>
+        <p>${data.personalStatement}</p>
+
+        <h3>Backgrounds</h3>
+        <p><strong>Personal:</strong> ${data.personalBackground}</p>
+        <p><strong>Professional:</strong> ${data.professionalBackground}</p>
+        <p><strong>Academic:</strong> ${data.academicBackground}</p>
+        <p><strong>Platform:</strong> ${data.computerPlatform}</p>
+
+        <h3>Courses</h3>
+        <ul>${data.courses.map(c => `<li>${c.dept} ${c.num} - ${c.name}: ${c.reason}</li>`).join("")}</ul>
+
+        <h3>Links</h3>
+        <ul>${data.links.map(l => `<li><a href="${l}" target="_blank">${l}</a></li>`).join("")}</ul>
+
+        <h3>Favorite Quote</h3>
+        <blockquote><em>"${data.quote}"</em> - ${data.quoteAuthor}</blockquote>
+
+        ${data.funnyThing ? `<p><strong>Funny Thing:</strong> ${data.funnyThing}</p>` : ""}
+        ${data.somethingShare ? `<p><strong>Something to Share:</strong> ${data.somethingShare}</p>` : ""}
+      `;
+    });
+  </script>
+</body>
+</html>
+
