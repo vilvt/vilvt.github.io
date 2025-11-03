@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Overview — Learn About UNC Charlotte's Orchestra</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div data-include="components/header.html"></div>
+      <h1>Learn About UNC Charlotte's Orchestra</h1>
+      <p class="meta">Project Overview — Prepared by Saige Hatfield</p>
+      <nav class="doc-nav">
+        <a href="#overview">Overview</a> ~
+        <a href="#client">Client</a> ~
+        <a href="#sitemap">Site Map</a> ~
+        <a href="#pagedesign">Page Design</a> ~
+        <a href="#dynamic">Dynamic Functionality</a> ~
+        <a href="#notes">Notes</a> ~
+      </nav>
+    </header>
+
+    <section id="overview" class="card">
+      <h2>Application & Purpose</h2>
+      <p>
+        The website will modernize and centralize all orchestra information — concerts, member bios, media, and 
+        joining details — in one elegant, accessible hub.
+        It improves upon the existing <a href="https://coaa.charlotte.edu/music/ensembles/orchestra/" target="_blank">
+        COAA Ensembles page</a>, which mixes orchestra content with other ensembles.
+      </p>
+      <h3>Intended Users</h3>
+      <ul>
+        <li>UNC Charlotte students (prospective/current music majors)</li>
+        <li>Orchestra members & faculty</li>
+        <li>Parents, alumni, and donors</li>
+        <li>Local concertgoers</li>
+      </ul>
+      <h3>Planned Content</h3>
+      <ul>
+        <li>Home — Mission & featured next concert</li>
+        <li>Events — Upcoming & past concerts</li>
+        <li>About — History, conductor, concertmaster, members</li>
+        <li>Gallery — Photos & videos</li>
+        <li>Join / Contact — Inquiry form & joining info</li>
+      </ul>
+    </section>
+
+    <section id="client" class="card">
+      <h2>Client Information</h2>
+      <p><strong>Client Name:</strong> Jacob Bell</p>
+      <p><strong>Organization:</strong> UNC Charlotte Orchestra, Department of Music, College of Arts + Architecture</p>
+      <p><strong>Email:</strong> <a href="mailto:jbell92@charlotte.edu">jbell92@charlotte.edu</a></p>
+      <p><strong>Phone:</strong> [private]</p>
+      <p><strong>Reference site:</strong> 
+        <a href="https://coaa.charlotte.edu/music/ensembles/orchestra/" target="_blank">COAA Ensembles — Orchestra</a>
+      </p>
+    </section>
+
+    <section id="sitemap" class="card">
+      <h2>Wireframe & Site Map</h2>
+      <figure>
+        <img src="images/site_map.png" alt="Homepage site map" class="placeholder">
+        <figcaption>Site map for website</figcaption>
+      </figure>
+      <figure>
+        <img src="images/wire_frame.png" alt="Homepage wire frame" class="placeholder">
+        <figcaption>Wire frame for website</figcaption>
+      </figure>
+      <pre>
+Home
+├── Events
+├── About
+├── Gallery
+├── Join / Contact
+└── Media (optional)
+      </pre>
+    </section>
+
+    <section id="pagedesign" class="card">
+      <h2>Page Design Summary</h2>
+
+      <h3>Home</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Introduce the orchestra, highlight next concert.</li>
+        <li><strong>Content:</strong> Hero image, mission, concert preview, quick links.</li>
+        <li><strong>Future JS:</strong> Smooth scrolling, event modal.</li>
+      </ul>
+
+      <h3>Events</h3>
+      <ul>
+        <li><strong>Purpose:</strong> List upcoming and past concerts.</li>
+        <li><strong>Content:</strong> Date, venue, description, Google Maps link.</li>
+        <li><strong>Future JS:</strong> Filter by date, load event details from JSON.</li>
+      </ul>
+
+      <h3>About</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Share orchestra history, bios, and mission.</li>
+        <li><strong>Future JS:</strong> jQuery UI dialog for bios.</li>
+      </ul>
+
+      <h3>Gallery</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Showcase photos and videos of performances.</li>
+        <li><strong>Future JS:</strong> Lightbox or slideshow functionality.</li>
+      </ul>
+
+      <h3>Join / Contact</h3>
+      <ul>
+        <li><strong>Purpose:</strong> Allow visitors to reach out or join.</li>
+        <li><strong>Future JS:</strong> Client-side validation and mailto fallback.</li>
+      </ul>
+    </section>
+
+    <section id="dynamic" class="card">
+      <h2>Planned Dynamic Features</h2>
+      <ul>
+        <li>Event filtering with jQuery</li>
+        <li>Lightbox gallery plugin</li>
+        <li>Modal pop-ups for bios</li>
+        <li>Form validation for contact page</li>
+        <li>AJAX loading of event data (from <code>data/events.json</code>)</li>
+      </ul>
+      <p>These will be added after static layout completion.</p>
+    </section>
+
+    <section id="notes" class="card">
+      <h2>Notes & References</h2>
+      <ul>
+        <li>Client: Jacob Bell, UNC Charlotte Orchestra</li>
+        <li>Reference: <a href="https://coaa.charlotte.edu/music/ensembles/orchestra/" target="_blank">
+            COAA Ensembles — Orchestra</a></li>
+        <li>Media: UNC Charlotte photo archives & event documentation</li>
+        <li>Accessibility: alt text for all media, keyboard navigation support</li>
+      </ul>
+    </section>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+  <script src="scripts/HTMLInclude.min.js"></script>
+  </main>
+</body>
+</html>
+
