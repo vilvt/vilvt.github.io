@@ -127,5 +127,11 @@ ul.link-list a:active {
   font-weight: bold;
 }
 
+#jsonOutput, #htmlOutput {
+  max-height: 500px;
+  overflow: auto;
+}
+
+
 
 

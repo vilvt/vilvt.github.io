@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       personalBackground: document.getElementById("personalBackground").value,
       professionalBackground: document.getElementById("professionalBackground").value,
       academicBackground: document.getElementById("academicBackground").value,
-      subjectBackground: "...", // optional field placeholder
+      subjectBackground: "...",
       primaryComputer: document.getElementById("computerPlatform").value,
       courses: Array.from(document.querySelectorAll(".course")).map((c) => ({
         department: c.children[0].value,
@@ -32,8 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }))
     };
 
-    // replace form with JSON display
     h2.textContent = "Introduction JSON";
-    form.outerHTML = `<section id="jsonOutput"><pre><code>${JSON.stringify(data, null, 2)}</code></pre></section>`;
+    form.outerHTML = `
+    <section id="jsonOutput" style="white-space: pre-wrap; max-height: 600px; overflow: auto; border: 1px solid #ccc; padding: 10px;">
+        <pre><code>${JSON.stringify(data, null, 2)}</code></pre>
+    </section>
+    `;
+
   });
 });
+
+
+
+

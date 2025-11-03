@@ -52,6 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 `;
 
     h2.textContent = "Introduction HTML";
-    form.outerHTML = `<section id="htmlOutput"><pre><code>${htmlContent}</code></pre></section>`;
+    form.outerHTML = `
+    <section id="htmlOutput" style="white-space: pre-wrap; max-height: 600px; overflow: auto; border: 1px solid #ccc; padding: 10px;">
+        <pre><code>${htmlContent}</code></pre>
+    </section>
+    `;
+
   });
 });
+
+
