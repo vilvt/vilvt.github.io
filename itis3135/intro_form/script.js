@@ -3,19 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const addCourseBtn = document.getElementById("addCourse");
   const coursesDiv = document.getElementById("courses");
   const imageUpload = document.getElementById("imageUpload");
+  const clearBtn = document.getElementById("clearResults");
   let imageData = "";
 
-  // Convert uploaded image to Base64
+  // convert uploaded image
   imageUpload.addEventListener("change", (event) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
-      reader.onload = (e) => (imageData = e.target.result);
+      reader.onload = (e) => imageData = e.target.result;
       reader.readAsDataURL(file);
     }
   });
 
-  // Add a new course block
+  // add a new course block
   addCourseBtn.addEventListener("click", () => {
     const courseDiv = document.createElement("div");
     courseDiv.classList.add("course");
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Handle form submission
+  // handle form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -63,16 +64,43 @@ document.addEventListener("DOMContentLoaded", () => {
         dept: c.children[0].value,
         num: c.children[1].value,
         name: c.children[2].value,
-        reason: c.children[3].value,
-      })),
+        reason: c.children[3].value
+      }))
     };
 
     localStorage.setItem("introData", JSON.stringify(data));
 
-    // Open new page to display results
     window.open("results.html", "_blank");
   });
+
+  // reset: kill everything
+const resetBtn = form.querySelector('button[type="reset"]');
+resetBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // prevent default
+  localStorage.removeItem("introData");
+  imageData = "";
+  // remove all courses
+  coursesDiv.querySelectorAll(".course").forEach((course) => course.remove());
+  // clear all form fields
+  form.querySelectorAll("input, textarea").forEach((input) => {
+    if (input.type === "file") input.value = "";
+    else input.value = "";
+  });
 });
+
+
+  // clear button: restore default prefilled info
+  clearBtn.addEventListener("click", () => {
+    form.reset();
+    imageData = "";
+    const originalCourses = 5;
+    const courseElements = coursesDiv.querySelectorAll(".course");
+    courseElements.forEach((course, index) => {
+      if (index >= originalCourses) course.remove();
+    });
+  });
+});
+
 
 
 

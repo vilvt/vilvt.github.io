@@ -69,9 +69,14 @@ button[type="reset"] {
   background-color: #e35260;
 }
 
-button#clearBtn {
-  background-color: #6c757d;
+/* remove overqualified selector */
+#clearResults {
+  background-color: #492d2d;
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+  cursor: pointer;
 }
+
 
 button:hover {
   background-color: #57875f;
