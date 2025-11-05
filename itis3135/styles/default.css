@@ -1,4 +1,4 @@
-/* General reset */
+/* general */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -8,7 +8,9 @@ body {
   background: #f9f9f9;
 }
 
-/* Header */
+* { box-sizing: border-box; }
+
+/* header */
 header {
   background: #8a388b;
   color: white;
@@ -26,7 +28,7 @@ header .tagline {
   color: #ecf0f1;
 }
 
-/* Main */
+/* main */
 main {
   padding: 2rem;
   max-width: 800px;
@@ -48,7 +50,7 @@ footer {
 }
 
 footer a {
-  color: #cd49da;
+  color: #F2CCF5;
   text-decoration: none;
 }
 
@@ -57,7 +59,7 @@ footer a:hover {
 }
 
 header a {
-  color: #cd49da;
+  color: #F2CCF5;
   text-decoration: none;
 }
 
@@ -81,14 +83,66 @@ body {
 
 /* large screens / laptops */
 @media screen and (min-width: 981px) and (max-width: 1400px) {
+  header {
+    padding: 2.5rem 3rem;
+  }
+
+  main {
+    padding: 2rem 3rem;
+    max-width: 1000px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 /* tablets */
 @media screen and (min-width: 601px) and (max-width: 980px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  footer {
+    padding: 0.75rem;
+  }
 }
 
 /* phones */
 @media screen and (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  header .tagline {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  footer {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  ol, ul {
+    padding-left: 1rem;
+  }
 }
 
 ol, ul {
