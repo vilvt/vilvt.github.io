@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UNC Charlotte Orchestra</title>
+  <title>Home | UNC Charlotte Orchestra</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <h1>UNC Charlotte Orchestra</h1>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -21,16 +21,63 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <h2>Experience the Symphony of Niner Nation</h2>
-      <p>Explore the world of music, performance, and creativity through UNC Charlotte’s Orchestra. Discover upcoming concerts, meet our talented musicians, and learn how you can be part of the ensemble.</p>
+      <img src="images/orchestra_hero.jpg" alt="UNC Charlotte Orchestra performing" class="hero-img">
+      <div class="hero-text">
+        <h2>Celebrating Excellence in Orchestral Music</h2>
+        <p>Join us as we perform a variety of classical and contemporary works each semester.</p>
+        <a href="events.html" class="btn">View Upcoming Events</a>
+      </div>
     </section>
 
-    <section class="highlight">
-      <h3>🎶 Next Performance</h3>
-      <p><strong>Winter Concert:</strong> “Classics Under the Stars”</p>
-      <p><strong>Date:</strong> December 12, 2025</p>
-      <p><strong>Location:</strong> Anne R. Belk Theater, Robinson Hall</p>
+    <!-- About / Mission -->
+    <section class="intro">
+      <h2>Welcome to UNC Charlotte Orchestra</h2>
+      <p>The UNC Charlotte Orchestra brings together talented students and faculty to perform an inspiring repertoire ranging from classical masterworks to contemporary compositions. We aim to provide educational growth, musical excellence, and vibrant performances for the community.</p>
+    </section>
+
+    <!-- Upcoming Events Preview -->
+    <section class="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <article>
+        <h3>What’s Music Got to Do with It? — Creativity in the Age of A.I.</h3>
+        <p><strong>Date:</strong> Friday, November 14, 2025 · 1:00 PM</p>
+        <p><strong>Location:</strong> Rowe Recital Hall, UNC Charlotte</p>
+        <a href="events.html#upcoming" class="btn">Learn More</a>
+      </article>
+
+      <article>
+        <h3>UNC Charlotte Orchestra & NC Youth Orchestra Joint Concert</h3>
+        <p><strong>Date:</strong> Thursday, November 20, 2025 · 7:30 PM</p>
+        <p><strong>Location:</strong> Robinson Hall, Anne R. Belk Theater</p>
+        <a href="events.html#upcoming" class="btn">Learn More</a>
+      </article>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+      <h2>Explore More</h2>
+      <div class="links">
+        <a href="about.html" class="btn">About the Orchestra</a>
+        <a href="gallery.html" class="btn">View Our Gallery</a>
+        <a href="contact.html" class="btn">Join / Contact</a>
+      </div>
+    </section>
+
+    <!-- Featured Musicians -->
+    <section class="featured-musicians">
+      <h2>Featured Leaders</h2>
+      <div class="profile-preview">
+        <img src="images/conductor-picture.jpg" alt="Dr. Alan Yamamoto">
+        <p><strong>Dr. Alan Yamamoto</strong> – Conductor & Director of Orchestras</p>
+        <a href="about.html#conductor" class="btn">Learn More</a>
+      </div>
+      <div class="profile-preview">
+        <img src="images/concertmaster-picture.jpg" alt="Concertmaster Jacob">
+        <p><strong>Jacob Bell</strong> – Concertmaster, Fall 2025</p>
+        <a href="about.html#concertmaster" class="btn">Learn More</a>
+      </div>
     </section>
   </main>
 
@@ -39,3 +86,4 @@
   </footer>
 </body>
 </html>
+
