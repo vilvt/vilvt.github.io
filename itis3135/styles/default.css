@@ -1,16 +1,18 @@
-/* general */
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #333;
-  background: #f9f9f9;
+  background: #faf9fb;
 }
 
-* { box-sizing: border-box; }
-
-/* header */
+/* HEADER */
 header {
   background: #8a388b;
   color: white;
@@ -18,48 +20,21 @@ header {
   padding: 2rem 1rem;
 }
 
-h1 {
+header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.3rem;
+  font-weight: 700;
 }
 
 header .tagline {
+  margin-top: 0.4rem;
   font-style: italic;
-  color: #ecf0f1;
-}
-
-/* main */
-main {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-h2 {
-  color: #8a388b;
-  margin-bottom: 0.5rem;
-}
-
-/* Footer */
-footer {
-  background: #8a388b;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-footer a {
-  color: #F2CCF5;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  color: #f2d6f6;
+  font-size: 1rem;
 }
 
 header a {
-  color: #F2CCF5;
+  color: #f2d6f6;
   text-decoration: none;
 }
 
@@ -67,91 +42,117 @@ header a:hover {
   text-decoration: underline;
 }
 
+/* MAIN */
 main, .maincontainer {
-  width: 90%;          /* percentage width for responsiveness */
-  max-width: 1200px;   /* keeps content from stretching too wide */
-  margin: 0 auto;      /* centers content horizontally */
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+h2 {
+  color: #8a388b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* LISTS */
+ul, ol {
+  padding-left: 1.8rem;
+  margin: 1.2rem 0;
+}
+
+li {
+  margin: 0.6rem 0;
+  line-height: 1.55;
+  padding-left: 0.3rem;
+  border-left: 3px solid #e8d3ec;
+}
+
+ul li::marker,
+ol li::marker {
+  color: #8a388b;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+/* SCREENSHOTS */
+.screenshot-box {
   text-align: center;
+  margin: 1.6rem 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+.screenshot-box img {
+  max-width: 80%;
+  border: 2px solid #ddd;
+  border-radius: 6px;
 }
 
-/* === RESPONSIVE MEDIA QUERIES === */
+.screenshot-box p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #444;
+}
 
-/* large screens / laptops */
-@media screen and (min-width: 981px) and (max-width: 1400px) {
-  header {
-    padding: 2.5rem 3rem;
-  }
+/* FOOTER */
+footer {
+  background: #8a388b;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
 
-  main {
-    padding: 2rem 3rem;
-    max-width: 1000px;
-  }
+footer a {
+  color: #f2ccf5;
+  text-decoration: none;
+}
 
-  h1 {
-    font-size: 2.5rem;
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media screen and (min-width: 981px) {
+  header h1 {
+    font-size: 2.6rem;
   }
 }
 
-/* tablets */
 @media screen and (min-width: 601px) and (max-width: 980px) {
   header {
-    padding: 1.5rem 1rem;
+    padding: 1.5rem;
   }
-
-  h1 {
-    font-size: 1.8rem;
+  header h1 {
+    font-size: 2rem;
   }
-
   main {
     padding: 1.5rem;
   }
-
-  footer {
-    padding: 0.75rem;
-  }
 }
 
-/* phones */
 @media screen and (max-width: 600px) {
   header {
     padding: 1rem;
   }
-
-  h1 {
-    font-size: 1.5rem;
+  header h1 {
+    font-size: 1.6rem;
   }
-
-  header .tagline {
-    font-size: 0.9rem;
-  }
-
   main {
-    padding: 1rem;
+    padding: 1.2rem;
     width: 95%;
   }
-
-  footer {
-    padding: 0.75rem;
-    font-size: 0.9rem;
-  }
-
-  ol, ul {
-    padding-left: 1rem;
+  ul, ol {
+    padding-left: 1.4rem;
   }
 }
 
-ol, ul {
-  padding-left: 1.2rem; 
-  margin: 0.5rem 0;   
-  list-style-position: inside;  
-}
 
-li {
-  margin: 0.2rem 0;      
-  line-height: 1.4;      
-}
