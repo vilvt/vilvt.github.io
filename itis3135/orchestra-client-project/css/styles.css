@@ -1,9 +1,11 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background-color: #f4f4f8;
@@ -11,6 +13,19 @@ body {
   line-height: 1.6;
 }
 
+/* Headings */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  border-bottom: 3px solid #004d40;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Header */
 header {
   background-color: #004d40;
   color: white;
@@ -18,28 +33,13 @@ header {
   padding: 1.5rem 1rem;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-header .tagline {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  word-wrap: break-word;
-}
-
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 10px;
+  gap: 10px;
 }
 
 nav ul li a {
@@ -47,15 +47,28 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   padding: 5px 10px;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s;
 }
 
+nav ul li a:hover,
+nav ul li a:active {
+  background: #c7f7ed;
+  color: #004d40;
+  border-radius: 5px;
+}
+
+/* Main */
 main {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -78,11 +91,7 @@ main {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-.hero-text h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
+/* Buttons */
 .btn {
   display: inline-block;
   margin-top: 0.5rem;
@@ -92,7 +101,7 @@ main {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -100,18 +109,10 @@ main {
   color: #004d40;
 }
 
-section {
-  margin-bottom: 2.5rem;
-}
-
-h2 {
-  border-bottom: 3px solid #004d40;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
+/* Event Cards */
 .upcoming-events article,
-.past-events article {
+.past-events article,
+.event-card {
   background-color: white;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -119,24 +120,25 @@ h2 {
   border-radius: 5px;
 }
 
+/* Profiles */
 .profile {
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 2rem;
 }
 
 .profile-img {
   width: 200px;
-  height: auto;
   border-radius: 10px;
+  display: block;
 }
 
 .profile .bio {
   flex: 1;
 }
 
+/* Featured musicians */
 .featured-musicians {
   display: flex;
   gap: 2rem;
@@ -146,7 +148,6 @@ h2 {
 
 .profile-preview {
   background-color: white;
-  padding: 1rem;
   text-align: center;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
   border-radius: 10px;
@@ -156,24 +157,27 @@ h2 {
 .profile-preview img {
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 0.5rem;
 }
 
-.gallery-grid {
+/* Gallery */
+.gallery-box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.gallery-grid img {
-  width: 400px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  margin-left: 0;
+.gallery-box figure {
+  margin: 0;
 }
 
+.gallery-box figure img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Footer */
 footer {
   background-color: #004d40;
   color: white;
@@ -192,25 +196,22 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@media(max-width: 1024px) {
-  .gallery-grid img {
-    width: 100%;
-    height: auto;
-  }
-
+/* Responsive */
+@media (max-width: 1024px) {
   .profile {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  .gallery-box figure img {
+    width: 100%;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 5px 0;
+    gap: 6px;
   }
 
   .featured-musicians {
@@ -218,9 +219,3 @@ footer a:hover {
     align-items: center;
   }
 }
-
-
-
-
-
-
